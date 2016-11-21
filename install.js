@@ -114,6 +114,8 @@ function findSuitableTempDirectory() {
     var candidatePath = candidateTmpDirs[i]
     if (!candidatePath) continue
 
+    console.log('cand', candidatePath);
+
     try {
       candidatePath = path.join(path.resolve(candidatePath), 'slimerjs')
       fs.mkdirsSync(candidatePath, '0777')
